@@ -1,0 +1,17 @@
+.build-venv/
+build/
+dist/
+app/solvers/
+app/DATA/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.pytest_cache/
+*.pyo
+*.o
+*.obj
+*.exe
+*.dll
+*.dylib
+*.so

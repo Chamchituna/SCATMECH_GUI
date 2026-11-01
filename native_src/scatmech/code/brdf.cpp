@@ -1,0 +1,372 @@
+
+
+
+
+
+
+
+
+
+
+
+
+#include <complex>
+#include <limits>
+#include "scatmech.h"
+#include "brdf.h"
+#include "askuser.h"
+
+using namespace std;
+
+
+namespace SCATMECH {
+
+
+
+
+
+
+
+
+
+
+
+
+    void
+    Coordinate_System_plane_angles(double &psii,double &psis,
+                                   double thetai,double thetas,double phis)
+    {
+        double costhetai=cos(thetai);
+        double costhetas=cos(thetas);
+        double cosphi=cos(phis);
+        double sinthetai=sin(thetai);
+        double sinthetas=sin(thetas);
+        double sinphi=sin(phis);
+
+        double cosd = costhetai*costhetas - cosphi*sinthetai*sinthetas;
+        double sind = sqrt(1.-sqr(cosd));
+        double tana = (costhetas-costhetai*cosd)/(costhetai*sind);
+        double sina = tana/sqrt(1. + sqr(tana));
+        double cosa = 1./sqrt(1. + sqr(tana));
+        double sinb = -sinphi*sinthetas*sinthetai/sind;
+        double cosb = sqrt(1. - sqr(sinb));
+        double sinad = cosd*sina-cosa*sind;
+
+        psii = -atan2(-sinb,cosb*sina);
+        psis = atan2(sinb,cosb*sinad);
+    }
+
+    int
+    BRDF_Model::
+    set_geometry(double _thetai,double _thetas,double _phis,double _rotation)
+    {
+        thetai=_thetai;
+        thetas=_thetas;
+        phis=_phis;
+        rotation=_rotation;
+
+        if (thetai!=last_thetai || rotation!=last_rotation) set_recalc(recalc_on_incident_change);
+        if (thetas!=last_thetas || phis!=last_phis || rotation!=last_rotation) set_recalc(recalc_on_scatter_change);
+
+        last_thetai=thetai;
+        last_thetas=thetas;
+        last_phis=phis;
+        last_rotation=rotation;
+
+        if (thetas>=pi/2) return 0;
+        if (thetas<=-pi/2) return 0;
+        if (thetai>=pi/2) return 0;
+        if (thetai<=-pi/2) return 0;
+        return 1;
+    }
+
+    int
+    BRDF_Model::
+    set_geometry(const Vector& source,const Vector& viewer,const Vector& normal,const Vector& xaxis)
+    {
+
+        Vector norm_source = unit(source);
+        Vector norm_viewer = unit(viewer);
+        Vector norm_normal = unit(normal);
+
+        Vector norm_xaxis = unit(xaxis-norm_normal*(norm_normal*xaxis));
+
+
+        double costhetai = norm_source*norm_normal;
+
+        double costhetas = norm_viewer*norm_normal;
+
+
+        if (((costhetai<0. || costhetas<0.) && type==Type_DOWNUP) ||
+                ((costhetai<0. || costhetas>0.) && type==Type_DOWNDOWN) ||
+                ((costhetai>0. || costhetas>0.) && type==Type_UPDOWN) ||
+                ((costhetai>0. || costhetas<0.) && type==Type_UPUP)) {
+
+            thetas = thetai = 0.;
+            phis = 0.;
+
+            if (thetai!=last_thetai || rotation!=last_rotation) set_recalc(recalc_on_incident_change);
+            if (thetas!=last_thetas || phis!=last_phis || rotation!=last_rotation) set_recalc(recalc_on_scatter_change);
+
+            last_thetai=thetai;
+            last_thetas=thetas;
+            last_phis=phis;
+            last_rotation=rotation;
+
+            return (0);
+        }
+
+        if (costhetai > 1.0) costhetai = 1.;
+        if (costhetas > 1.0) costhetas = 1.;
+        if (costhetai < -1.0) costhetai = -1.;
+        if (costhetas < -1.0) costhetas = -1.;
+
+        thetai = (type==Type_DOWNUP || type==Type_DOWNDOWN) ? acos(costhetai) : acos(-costhetai);
+        thetas = (type==Type_DOWNUP || type==Type_UPUP) ? acos(costhetas) : acos(-costhetas);
+
+
+        Vector kinperp  = norm_source - costhetai*norm_normal;
+        Vector koutperp = norm_viewer - costhetas*norm_normal;
+
+
+        Vector kinperphat = unit(kinperp);
+
+
+        Vector yhat = perpto(kinperphat,norm_normal);
+
+        double cosphis = -norm_viewer*kinperphat;
+        double sinphis = -norm_viewer*yhat;
+
+        phis = atan2(sinphis,cosphis);
+
+        Vector norm_yaxis = perpto(norm_normal,norm_xaxis);
+
+        rotation = atan2(-norm_yaxis*norm_source,norm_xaxis*norm_source);
+
+        if (thetai!=last_thetai || rotation!=last_rotation) set_recalc(recalc_on_incident_change);
+        if (thetas!=last_thetas || phis!=last_phis || rotation!=last_rotation) set_recalc(recalc_on_scatter_change);
+
+        last_thetai=thetai;
+        last_thetas=thetas;
+        last_phis=phis;
+        last_rotation=rotation;
+
+        return 1;
+    }
+
+    void
+    BRDF_Model::
+    convert(JonesMatrix& J,Coordinate_System to) const
+    {
+        Coordinate_System from = model_cs;
+        if (from==to) return;
+
+        if (from==xyxy) {
+
+			Vector ki = (type==0||type==1) ? Vector(sin(thetai),0.,-cos(thetai)) : Vector(sin(thetai),0.,cos(thetai));
+			Vector ko = (type==0||type==3) ? Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),cos(thetas)) : Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),-cos(thetas));
+			Vector _xi,_yi,_xo,_yo,_si,_pi,_so,_po;
+			GetBasisVectorsSP(ko,_so,_po);
+			GetBasisVectorsSP(ki,_si,_pi);
+			GetBasisVectorsXY(ko,_xo,_yo);
+			GetBasisVectorsXY(ki,_xi,_yi);
+			JonesMatrix ri = GetJonesRotator(_yi,_xi,_si,_pi);
+			JonesMatrix ro = GetJonesRotator(_so,_po,_yo,_xo);
+			J = ro*J*ri;
+
+        } else if (from==plane) {
+
+            double psii,psis;
+            Coordinate_System_plane_angles(psii,psis,thetai,thetas,phis);
+            J = (JonesRotator(psis)*J)*JonesRotator(psii);
+        }
+
+        if (to == xyxy) {
+
+			Vector ki = (type==0||type==1) ? Vector(sin(thetai),0.,-cos(thetai)) : Vector(sin(thetai),0.,cos(thetai));
+			Vector ko = (type==0||type==3) ? Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),cos(thetas)) : Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),-cos(thetas));
+			Vector xi,yi,xo,yo,si,pi,so,po;
+			GetBasisVectorsSP(ko,so,po);
+			GetBasisVectorsSP(ki,si,pi);
+			GetBasisVectorsXY(ko,xo,yo);
+			GetBasisVectorsXY(ki,xi,yi);
+			JonesMatrix ri = GetJonesRotator(si,pi,yi,xi);
+			JonesMatrix ro = GetJonesRotator(yo,xo,so,po);
+			J = ro*J*ri;
+
+
+
+
+
+
+        } else if (to==plane) {
+
+			Vector ki = type==0||type==1 ? Vector(sin(thetai),0.,-cos(thetai)) : Vector(sin(thetai),0.,cos(thetai));
+			Vector ko = type==0||type==3 ? Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),cos(thetas)) : Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),-cos(thetas));
+			Vector si,pi,so,po,perp,parin,parout;
+			GetBasisVectorsSP(ko,so,po);
+			GetBasisVectorsSP(ki,si,pi);
+			GetBasisVectorsParPerp(ki,ko,perp,parin,parout);
+
+			J = (GetJonesRotator(perp,parout,so,po)*J)*GetJonesRotator(si,pi,perp,parin);
+
+
+
+        }
+    }
+
+    void
+    BRDF_Model::
+    convert(MuellerMatrix& M,Coordinate_System to) const
+    {
+        Coordinate_System from = model_cs;
+        if (from==to) return;
+
+        if (from==xyxy) {
+
+			Vector ki = (type==0||type==1) ? Vector(sin(thetai),0.,-cos(thetai)) : Vector(sin(thetai),0.,cos(thetai));
+			Vector ko = (type==0||type==3) ? Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),cos(thetas)) : Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),-cos(thetas));
+			Vector xi,yi,xo,yo,si,pi,so,po;
+			GetBasisVectorsSP(ko,so,po);
+			GetBasisVectorsSP(ki,si,pi);
+			GetBasisVectorsXY(ko,xo,yo);
+			GetBasisVectorsXY(ki,xi,yi);
+			MuellerMatrix ri = GetJonesRotator(yi,xi,si,pi);
+			MuellerMatrix ro = GetJonesRotator(so,po,yo,xo);
+			M = ro*M*ri;
+        } else if (from==plane) {
+
+            double psii,psis;
+            Coordinate_System_plane_angles(psii,psis,thetai,thetas,phis);
+            M= (((MuellerMatrix)JonesRotator(psis))*M)*
+               ((MuellerMatrix)JonesRotator(psii));
+        }
+
+        if (to == xyxy) {
+
+			Vector ki = (type==0||type==1) ? Vector(sin(thetai),0.,-cos(thetai)) : Vector(sin(thetai),0.,cos(thetai));
+			Vector ko = (type==0||type==3) ? Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),cos(thetas)) : Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),-cos(thetas));
+			Vector xi,yi,xo,yo,si,pi,so,po;
+			GetBasisVectorsSP(ko,so,po);
+			GetBasisVectorsSP(ki,si,pi);
+			GetBasisVectorsXY(ko,xo,yo);
+			GetBasisVectorsXY(ki,xi,yi);
+			MuellerMatrix ri = GetJonesRotator(si,pi,yi,xi);
+			MuellerMatrix ro = GetJonesRotator(yo,xo,so,po);
+			M = ro*M*ri;
+
+
+
+
+
+        } else if (to==plane) {
+
+
+
+
+
+			Vector ki = type==0||type==1 ? Vector(sin(thetai),0.,-cos(thetai)) : Vector(sin(thetai),0.,cos(thetai));
+			Vector ko = type==0||type==3 ? Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),cos(thetas)) : Vector(sin(thetas)*cos(phis),sin(thetas)*sin(phis),-cos(thetas));
+			Vector si,pi,so,po,perp,parin,parout;
+			GetBasisVectorsSP(ko,so,po);
+			GetBasisVectorsSP(ki,si,pi);
+			GetBasisVectorsParPerp(ki,ko,perp,parin,parout);
+
+			M = (MuellerMatrix(GetJonesRotator(perp,parout,so,po))*M)*MuellerMatrix(GetJonesRotator(si,pi,perp,parin));
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+    JonesMatrix
+    BRDF_Model::
+    Jones(double thetai,double thetas,double phis,double rotation,Coordinate_System cs)
+    {
+        if (set_geometry(thetai,thetas,phis,rotation)) {
+            JonesMatrix j = jones();
+            convert(j,cs);
+            return j;
+        } else {
+            return JonesZero();
+        }
+    }
+
+
+
+
+
+
+
+
+    MuellerMatrix
+    BRDF_Model::
+    Mueller(double thetai,double thetas,double phis,double rotation,Coordinate_System cs)
+    {
+        if (set_geometry(thetai,thetas,phis,rotation)) {
+            MuellerMatrix m = mueller();
+            convert(m,cs);
+            return m;
+        } else {
+            return MuellerZero();
+        }
+    }
+
+    void
+    BRDF_Model::
+    setup()
+    {
+        Model::setup();
+        if (type!=Type_DOWNUP && substrate.k(lambda)!=0.)
+            error("Absorbing substrate for type==1, 2, or 3");
+        if (type<0||type>3)
+            error("Illegal type: must be 0, 1, 2, or 3");
+    }
+
+    JonesMatrix
+    BRDF_Model::
+    Jones(const Vector& source,
+          const Vector& viewer,
+          const Vector& normal,
+          const Vector& xaxis,
+          Coordinate_System cs)
+    {
+        if (set_geometry(source,viewer,normal,xaxis)) {
+            return Jones(thetai,thetas,phis,rotation,cs);
+        } else {
+            return JonesZero();
+        }
+    }
+
+    MuellerMatrix
+    BRDF_Model::
+    Mueller(const Vector& source,
+            const Vector& viewer,
+            const Vector& normal,
+            const Vector& xaxis,
+            Coordinate_System cs)
+    {
+        if (set_geometry(source,viewer,normal,xaxis)) {
+            return Mueller(thetai,thetas,phis,rotation,cs);
+        } else {
+            return MuellerZero();
+        }
+    }
+
+    DEFINE_VIRTUAL_MODEL(BRDF_Model,Model,"All BRDF models.");
+    DEFINE_PARAMETER(BRDF_Model,double,lambda,"Wavelength [um]","0.532",0xFF);
+    DEFINE_PARAMETER(BRDF_Model,dielectric_function,substrate,"Substrate","(4.05,0.05)",0xFF);
+    DEFINE_PARAMETER(BRDF_Model,int,type,"(0) for Forward/Reflection, (1) for Forward/Transmission, (2) for Backward/Reflection, or (3) for Backward/Transmission","0",0x80);
+
+    int get_model_depth=0;
+
+
+}
+
+

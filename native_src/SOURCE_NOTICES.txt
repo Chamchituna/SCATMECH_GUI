@@ -1,0 +1,2559 @@
+SCATMECH source attributions
+============================
+
+Original attribution headers and the World Scientific notice have been moved
+out of the comment-free source files. Paths below are relative to native_src.
+The complete NIST notice and disclaimer remain in SCATMECH_LICENSE.txt.
+
+
+scatmech/code/BRDFProg/BRDFProg.cpp
+-----------------------------------
+
+************************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: BRDFProg.cpp
+**
+** Thomas A. Germer
+** Optical Technology Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+** Version: 7.00 (January 2015)
+**
+************************************************************************************
+
+
+scatmech/code/MieProg/MieProg.cpp
+---------------------------------
+
+************************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: MieProg.cpp
+**
+** Thomas A. Germer
+** Optical Technology Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+** Version: 7.00 (January 2015)
+**
+************************************************************************************
+Locally adapted for SCATMECH GUI: theta/phi sampling and output.
+
+
+scatmech/code/RCWProg/RCWProg.cpp
+---------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: RCWProg.cpp
+**
+** Thomas A. Germer
+** Optical Technology Division,
+** National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+** Version 7.00 (January 2015)
+**
+******************************************************************************
+
+
+scatmech/code/ReflectProg/ReflectProg.cpp
+-----------------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: ReflectProg.cpp
+**
+** Thomas A. Germer
+** Optical Technology Division,
+** National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+** Version 7.00 (January 2015)
+**
+******************************************************************************
+
+
+scatmech/code/allrough.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: allrough.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/allrough.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: allrough.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/askuser.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: askuser.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/askuser.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: askuser.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/axifree.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: axifree.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+#include <float.h>
+
+
+scatmech/code/axifree.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: axifree.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/axipart.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: axipart.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/axipart1.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: axipart1.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+#include <float.h>
+
+
+scatmech/code/axipart2.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: axipart2.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/axisym.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: axisym.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/bobvlieg.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: bobvlieg.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/bobvlieg1.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: bobvlieg1.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+#include <float.h>
+
+
+scatmech/code/bobvlieg2.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: bobvlieg2.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/bobvlieg3.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: bobvlieg3.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+THIS FILE CONTAINS ROUTINES USED TO CALCULATE THE INTEGRALS OF THE
+BOBBERT & VLIEGER MODEL
+
+
+scatmech/code/brdf.cpp
+----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: brdf.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/brdf.h
+--------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: brdf.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/coatedmie.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: coated.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/coatedmie.h
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: coated.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crossgrating.cpp
+------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crossgrating.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crossgrating.h
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crossgrating.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crossgrating2.cpp
+-------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crossgrating2.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crossgrating2.h
+-----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crossgrating2.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crossrcw.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crossrcw.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crossrcw.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crossrcw.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crough.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crough.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/crough.h
+----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: crough.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/dielfunc.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: dielfunc.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/dielfunc.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: dielfunc.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/diffuse.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: diffuse.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/diffuse.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: diffuse.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/facet.cpp
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: facet.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/facet.h
+---------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: facet.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/fft.cpp
+---------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: fft.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/fft.h
+-------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: fft.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/filmtran.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: filmtran.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+*****************************************************************************
+*
+* Operations needed to calculate reflectance from and transmittance through
+* a film stack.
+*
+* See G. R. Fowles, _Introduction_to_Modern_Optics_, Second Edition,
+*     (Holt, Rinehart and Winston, New York, 1975)
+*     Section 4.4, Theory of Multilayer Films
+*     Note that some of the work is left to the reader in Problem 4.10.
+*
+*****************************************************************************
+
+In all of functions in this file, the angles were changed to be complex.
+(Version 3.02, TAG 7 AUG 2002)
+
+*****************************************************************************
+Major changes were made in SCATMECH version 3 to the classes
+dielectric_stack and Thin_Film_Transfer_Matrix so that the wavelength
+could more easily be changed.   (TAG 19 JAN 2001)
+*****************************************************************************
+
+
+scatmech/code/filmtran.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: filmtran.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/finiteaperture.cpp
+--------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: finiteaperture.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/finiteaperture.h
+------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: finiteaperture.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/firstdiffuse.cpp
+------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: firstdiffuse.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/firstdiffuse.h
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: firstdiffuse.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/flake.cpp
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: flake.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/flake.h
+---------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: flake.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/focussedbeam.cpp
+------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: focussedbeam.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/focussedbeam.h
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: focussedbeam.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/fresnel.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: fresnel.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/fresnel.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: fresnel.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/gcross.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: gcross.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/gcross.h
+----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: gcross.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/grating.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: grating.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/grating.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: grating.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/inherit.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: inherit.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/inherit.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: inherit.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/instrument.cpp
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: instrument.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/instrument.h
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: instrument.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/jmatrix.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: jmatrix.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/jvector.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: jvector.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/lambert.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: lambert.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/lambert.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: lambert.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/local.cpp
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: local.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/local.h
+---------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: local.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/matrix3d.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: matrix3d.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/matrixmath.cpp
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: matrixmath.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/matrixmath.h
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: matrixmath.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/matrixmath2.cpp
+-----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: matrixmath2.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/miescat.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: miescat.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/miescat.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: miescat.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/models.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: models.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/mueller.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: mueller.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/mueller.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: mueller.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/nsphere.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: nsphere.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/nsphere.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: nsphere.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/oasphere.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: oasphere.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/oasphere.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: oasphere.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/onelayer.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: onelayer.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/onelayer.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: onelayer.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/optconst.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: optconst.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/phasefunction.cpp
+-------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: phasefunction.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/phasefunction.h
+-----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: phasefunction.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/polydisperse.cpp
+------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: polydisperse.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/polydisperse.h
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: polydisperse.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/random.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: random.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/random.h
+----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: random.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/raygscat.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: raygscat.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/raygscat.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: raygscat.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rayinst.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rayinst.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rayinst.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rayinst.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rayscat.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rayscat.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rayscat.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rayscat.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/raystack.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: raystack.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/raystack.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: raystack.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rcw.cpp
+---------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rcw.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rcw.h
+-------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rcw.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reflectance.cpp
+-----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reflectance.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reflectance.h
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reflectance.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_brdf.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_brdf.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_facet.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_facet.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_instrument.cpp
+--------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_instrument.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_lambert.cpp
+-----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_lambert.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_local.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_local.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_rough.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_rough.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/reg_sphrscat.cpp
+------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: reg_brdf.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rough.cpp
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rough.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/rough.h
+---------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: rough.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/roughnes.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: roughnes.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/roughnes.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: roughnes.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scateval.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scateval.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scateval.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scateval.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scatmatrix.cpp
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scatmatrix.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scatmatrix.h
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scatmatrix.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scatmech.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scatmech.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scattabl.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scattabl.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/scattabl.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: scattabl.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sizedistribution.cpp
+----------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sizedistribution.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sizedistribution.h
+--------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sizedistribution.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sphdfct.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sphdfct.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sphdfct.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sphdfct.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sphprt.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sphprt.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sphprt.h
+----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sphprt.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sphrscat.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sphrscat.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/sphrscat.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: sphrscat.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/stokes.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: stokes.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/subbobvlieg.cpp
+-----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: subbobvlieg.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/subbobvlieg.h
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: subbobvlieg.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/subsphere.cpp
+---------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: subsphere.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/subsphere.h
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: subsphere.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/tmatrix.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: tmatrix.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+        This routine was adapted from "Light Scattering by Particles:
+        Computational Methods," by P.W. Barber and S.C. Hill, pp. 164-183.
+        Copyright (c) 1990 by World Scientific Publishing Co Pte Ltd.
+        See: http://www.worldscibooks.com/engineering/0784.html
+        Permission to incorporate this work into SCATMECH was granted.
+          The code was modified from FORTRAN to C++, and several changes
+        were made:
+             (1) Dynamic allocation of memory as needed
+             (2) Arbitrary axisymmetric shapes can be handled through
+                 the elements of a shape_vec.  The Gauss-Legendre integration
+                 is effectively handled by the Axisymmetric_Shape class, rather
+                 than by this routine.
+             (3) No convergence testing is performed.
+             (4) The simplification that Barber and Hill incorporated for
+                 mirror symmetric particles was removed.
+
+
+scatmech/code/tmatrix.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: tmatrix.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/torrspar.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: torrspar.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/torrspar.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: torrspar.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/transmit.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: transmit.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/transmit.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: transmit.h
+**
+** Thomas A. Germer
+** Sensor Science Division,
+** National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+**
+** Version 7.00 (January 2015)
+**
+******************************************************************************
+
+
+scatmech/code/two_source.cpp
+----------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: two_source.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/two_source.h
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: two_source.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/twoface.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: twoface.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/twoface.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: twoface.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/urough.cpp
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: urough.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/urough.h
+----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: urough.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/vector3d.cpp
+--------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: vector.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/vector3d.h
+------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: vector3d.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/zernike.cpp
+-------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: zernike.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/zernike.h
+-----------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: zernike.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/zernikeexpansion.cpp
+----------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: zernikeexpansion.cpp
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************
+
+
+scatmech/code/zernikeexpansion.h
+--------------------------------
+
+******************************************************************************
+** SCATMECH: Polarized Light Scattering C++ Class Library
+**
+** File: zernikeexpansion.h
+**
+** Thomas A. Germer
+** Sensor Science Division, National Institute of Standards and Technology
+** 100 Bureau Dr. Stop 8443; Gaithersburg, MD 20899-8443
+** Phone: (301) 975-2876
+** Email: thomas.germer@nist.gov
+**
+******************************************************************************

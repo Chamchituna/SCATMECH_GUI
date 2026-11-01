@@ -1,0 +1,184 @@
+
+
+
+
+
+
+
+
+
+
+
+
+#include "allrough.h"
+
+using namespace std;
+
+namespace SCATMECH {
+
+    void
+    Correlated_Roughness_Stack_BRDF_Model::
+    setup()
+    {
+        Roughness_BRDF_Model::setup();
+
+        model.set_lambda(lambda);
+        model.set_type(type);
+        model.set_substrate(substrate);
+        model.set_psd(psd);
+        model.set_stack(stack);
+    }
+
+    JonesMatrix
+    Correlated_Roughness_Stack_BRDF_Model::
+    jones()
+    {
+        SETUP();
+
+        JonesMatrix J=JonesZero();
+
+        for (int layer=0; layer<=stack->get_n(); ++layer) {
+            model.set_this_layer(layer);
+            J = J + model.Jones(thetai,thetas,phis,rotation);
+        }
+        return J;
+    }
+
+    void
+    Uncorrelated_Roughness_Stack_BRDF_Model::
+    setup()
+    {
+        Roughness_BRDF_Model::setup();
+
+        model.set_lambda(lambda);
+        model.set_type(type);
+        model.set_substrate(substrate);
+        model.set_psd(psd);
+        model.set_stack(stack);
+    }
+
+    MuellerMatrix
+    Uncorrelated_Roughness_Stack_BRDF_Model::
+    mueller()
+    {
+        SETUP();
+
+        MuellerMatrix M=MuellerZero();
+        for (int layer=0; layer<=stack->get_n(); ++layer) {
+            model.set_this_layer(layer);
+            M = M + model.Mueller(thetai,thetas,phis,rotation);
+        }
+        return M;
+    }
+
+    void
+    Growth_Roughness_Stack_BRDF_Model::
+    setup()
+    {
+        Roughness_BRDF_Model::setup();
+
+        model.set_lambda(lambda);
+        model.set_type(type);
+        model.set_substrate(substrate);
+        model.set_psd(psd);
+        model.set_stack(stack);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    MuellerMatrix
+    Growth_Roughness_Stack_BRDF_Model::
+    mueller()
+    {
+        SETUP();
+
+        int N = stack->get_n();
+        double fx,fy;
+        Bragg_Frequency(fx,fy);
+        double qpow = pow(4*sqr(pi)*(sqr(fx)+sqr(fy)),exponent/2.);
+        double nu = pow(relaxation,exponent-1.);
+
+        double PSDsub = psd->psd(fx,fy);
+        double FTsub = sqrt(PSDsub);
+        double PSDint0 = intrinsic->psd(fx,fy);
+
+        vector<double> a(N);
+        vector<double> PSDint(N);
+        for (int i=0; i<N; ++i) {
+
+
+			double argument = nu*qpow*stack->get_t()[i];
+
+
+            a[i] = exp(-argument);
+
+            PSDint[i] = PSDint0*(1.-sqr(a[i]));
+        }
+
+        vector<JonesMatrix> J(N+1);
+        for (int i=0; i<=N; ++i) {
+            model.set_this_layer(i);
+
+            J[i] = model.Jones(thetai,thetas,phis,rotation)/FTsub;
+        }
+
+
+        vector<vector<double> > covar(N+1,vector<double>(N+1));
+
+        for (int i=0; i<=N; ++i) {
+            covar[i][i] = 0.;
+            for (int j=0; j<=i; ++j) {
+                double aprod=1;
+                for (int k=j; k<i; ++k) {
+                    aprod *= sqr(a[k]);
+                }
+                covar[i][i] += aprod*(j==0 ? PSDsub : PSDint[j-1]);
+            }
+        }
+
+        for (int i=0; i<=N; ++i) {
+            for (int j=i+1; j<=N; ++j) {
+                covar[j][i] = covar[i][j] = a[j-1]*covar[i][j-1];
+            }
+        }
+
+
+        MuellerMatrix result = MuellerZero();
+        for (int i=0; i<=N; ++i) {
+            for (int j=0; j<=N; ++j) {
+                result += covar[i][j]*ReCrossMueller(J[i],J[j]);
+            }
+        }
+        return result;
+    }
+
+    DEFINE_MODEL(Correlated_Roughness_Stack_BRDF_Model,Roughness_BRDF_Model,
+                 "All films in a stack equally rough and correlated");
+	DEFINE_PTRPARAMETER(Correlated_Roughness_Stack_BRDF_Model,StackModel_Ptr,stack,"Film stack on substrate","No_StackModel",0xFF);
+
+
+    DEFINE_MODEL(Uncorrelated_Roughness_Stack_BRDF_Model,Roughness_BRDF_Model,
+                 "All films in a stack equally rough but uncorrelated");
+    DEFINE_PTRPARAMETER(Uncorrelated_Roughness_Stack_BRDF_Model,StackModel_Ptr,stack,"Film stack on substrate","No_StackModel",0xFF);
+
+    DEFINE_MODEL(Growth_Roughness_Stack_BRDF_Model,Roughness_BRDF_Model,
+                 "All films in a stack having intrinsic roughness, but also correlation with roughness from the stack below.");
+    DEFINE_PTRPARAMETER(Growth_Roughness_Stack_BRDF_Model,StackModel_Ptr,stack,"Film stack on substrate","No_StackModel",0xFF);
+    DEFINE_PARAMETER(Growth_Roughness_Stack_BRDF_Model,double,relaxation,"Correlation relaxation parameter [um]","0",0xFF);
+    DEFINE_PARAMETER(Growth_Roughness_Stack_BRDF_Model,double,exponent,"Correlation spatial frequency exponent parameter","2",0xFF);
+    DEFINE_PTRPARAMETER(Growth_Roughness_Stack_BRDF_Model,PSD_Function_Ptr,intrinsic,"Intrinsic PSD of the film interfaces","ABC_PSD_Function",0xFF);
+
+
+}
+

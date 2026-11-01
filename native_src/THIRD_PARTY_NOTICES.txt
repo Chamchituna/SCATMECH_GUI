@@ -1,0 +1,34 @@
+SCATMECH 7.23
+=============
+
+SCATMECH: Polarized Light Scattering C++ Class Library
+National Institute of Standards and Technology (NIST)
+Upstream: https://github.com/usnistgov/SCATMECH
+Documentation: https://pages.nist.gov/SCATMECH/
+
+The full NIST notice and disclaimer are in SCATMECH_LICENSE.txt. Include both
+that file, this file, and SOURCE_NOTICES.txt with binary and source
+distributions. Original source-file attribution headers and the World
+Scientific statement are preserved in SOURCE_NOTICES.txt, mapped to their
+source files. Code comments have been removed from scatmech/code.
+
+World Scientific notice in scatmech/code/tmatrix.cpp
+--------------------------------------------------
+
+This routine was adapted from "Light Scattering by Particles:
+Computational Methods," by P.W. Barber and S.C. Hill, pp. 164-183.
+Copyright (c) 1990 by World Scientific Publishing Co Pte Ltd.
+See: http://www.worldscibooks.com/engineering/0784.html
+Permission to incorporate this work into SCATMECH was granted.
+
+SOURCE_NOTICES.txt retains the accompanying explanation of the changes from
+FORTRAN to C++ and the original attribution. This notice reproduces the
+upstream permission statement; it does not grant separate rights beyond it.
+
+Local integration
+-----------------
+
+BRDFProg.cpp and MieProg.cpp include the existing SCATMECH GUI adaptations
+described in README.md. geometry_export.cpp is the SCATMECH GUI native
+geometry exporter. These additions are separate from the upstream NIST
+library; their distribution terms follow the SCATMECH GUI project.

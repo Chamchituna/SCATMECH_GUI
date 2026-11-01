@@ -1,0 +1,217 @@
+
+
+
+
+
+
+
+
+
+
+
+
+#ifndef SCATMECH_SCATMECH_H
+#define SCATMECH_SCATMECH_H
+
+#include <exception>
+#include <complex>
+#include <string>
+#include <list>
+#include <iomanip>
+#include "askuser.h"
+
+#ifdef USE_PTHREADS
+#include <pthread.h>
+#endif
+
+
+namespace SCATMECH {
+
+    typedef std::string STRING;
+    typedef std::complex<double> COMPLEX;
+
+
+
+
+    const double pi = 4.*atan(1.);
+    const double deg = pi/180.;
+
+    const char tab   = '\t';
+    const char space = ' ';
+    const char ret   = '\r';
+
+
+
+
+    template <class T>
+    inline T sqr(const T& x) {
+        return x*x;
+    }
+    template <class T>
+    inline T cube(const T& x) {
+        return x*x*x;
+    }
+
+
+
+
+
+    class SCATMECH_exception : public std::runtime_error
+    {
+        public:
+
+            SCATMECH_exception(const std::string m) :
+                std::runtime_error(std::string("SCATMECH: ") + m)
+            {}
+    };
+
+    template <class T>
+    std::string to_string(const T& t,int precision=-1)
+    {
+        std::ostringstream oss;
+        if (precision<0) oss << std::setprecision(precision);
+        oss << t;
+        return oss.str();
+    }
+
+    template <class T>
+    T from_string(const std::string& s)
+    {
+        T result;
+        std::istringstream iss(s);
+        iss >> result;
+
+        return result;
+    }
+
+    template <>
+    inline std::string from_string<std::string>(const std::string& s)
+    {
+        return s;
+    }
+
+    std::string Get_SCATMECH_Version();
+
+    void Set_SCATMECH_Input_Echo(const std::string& name);
+    void SCATMECH_Flush_Echo();
+
+    #ifdef USE_PTHREAD
+    class mutex_t {
+        public:
+            mutex_t() {
+                pthread_mutex_init(&it,NULL);
+            }
+            void lock() {
+                pthread_mutex_lock(&it);
+            }
+            void unlock() {
+                pthread_mutex_unlock(&it);
+            }
+        private:
+            pthread_mutex_t it;
+    };
+
+    #else
+    class mutex_t {
+        public:
+            void lock() {}
+            void unlock() {}
+    };
+    #endif
+
+
+
+
+
+
+    template <class T>
+    class PointerCollector {
+        private:
+            typedef std::list<T*> PointerList;
+            typedef typename PointerList::iterator PointerListIter;
+            PointerList trash;
+
+        public:
+            ~PointerCollector() {
+                empty();
+            }
+
+            T* New() {
+                T* t = new T;
+                trash.push_back(t);
+                return t;
+            }
+
+            T* New(T* t) {
+                trash.push_back(t);
+                return t;
+            }
+
+            T* New(const T& tt) {
+                T* t = new T(tt);
+                trash.push_back(t);
+                return t;
+            }
+
+            void empty() {
+                for (PointerListIter q = trash.begin(); q!=trash.end(); ++q) {
+                    delete (*q);
+                }
+                trash.clear();
+            }
+    };
+
+
+
+
+
+    class forloopint {
+        public:
+
+            class iterator {
+                public:
+                    iterator(int i,bool _downward) : here(i), downward(_downward) {}
+                    int operator ++() {
+                        return (downward ? --here : ++here);
+                    }
+                    bool operator!=(iterator& i) {
+                        return (i.here!=here || i.downward!=downward);
+                    }
+                    operator const int&() {
+                        return here;
+                    }
+                private:
+                    int here;
+                    bool downward;
+            };
+
+            forloopint(int _bottom,int _top,int _direction = +1) {
+                downward = _direction<0 ? true : false;
+                if (downward) {
+                    first = _top;
+                    last = _bottom;
+                } else {
+                    first = _bottom;
+                    last = _top;
+                }
+            }
+            iterator begin() {
+                if (downward && first<last) return end();
+                if (!downward && first>last) return end();
+                return iterator(first,downward);
+            }
+            iterator end() {
+                return (downward ? iterator(last-1,downward) : iterator(last+1,downward));
+            }
+
+        private:
+            int first;
+            int last;
+            bool downward;
+    };
+
+
+}
+
+
+#endif
